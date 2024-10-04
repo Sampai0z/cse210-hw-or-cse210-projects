@@ -6,8 +6,22 @@ class Program
 {
     static void Main(string[] args)
     {
-        var scripture = new Scripture(new Reference("Proverbs", 3, 5, 6), 
-            "Trust in the Lord with all your heart and lean not on your own understanding; in all your ways submit to him, and he will make your paths straight.");
+        // List of scriptures
+        var scriptures = new List<Scripture>
+        {
+            new Scripture(new Reference("Proverbs", 3, 5, 6), 
+                "Trust in the Lord with all your heart and lean not on your own understanding; in all your ways submit to him, and he will make your paths straight."),
+            new Scripture(new Reference("John", 3, 16), 
+                "For God so loved the world that he gave his one and only Son, that whoever believes in him shall not perish but have eternal life."),
+            new Scripture(new Reference("Alma", 37, 37), 
+                " Counsel with the Lord in all thy doings, and he will direct thee for good; yea, when thou liest down at night lie down unto the Lord, that he may watch over you in your sleep; and when thou risest in the morning let thy heart be full of thanks unto God; and if ye do these things, ye shall be lifted up at the last day."),
+            new Scripture(new Reference("1 Nephi", 3, 5), 
+                "And now, behold thy brothers murmur, saying it is a hard thing which I have required of them; but behold I have not required it of them, but it is a commandment of the Lord.")
+        };
+
+        // Select a random scripture from the list
+        var random = new Random();
+        var scripture = scriptures[random.Next(scriptures.Count)];
 
         while (!scripture.AllWordsHidden())
         {
