@@ -161,6 +161,12 @@ class Program
         Product product2 = new Product("Mouse", "P002", 25.50, 2);
         Product product3 = new Product("Monitor", "P003", 199.99, 1);
 
+
+
+
+
+        
+
         // Create order objects
         List<Product> products1 = new List<Product> { product1, product2 };
         Order order1 = new Order(products1, customer1);
