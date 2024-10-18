@@ -18,10 +18,10 @@ public class MindfulnessActivity
         Console.WriteLine($"Starting {_name}...");
         Console.WriteLine(_description);
         Console.Write("Enter the duration of the activity in seconds: ");
-        int duration = int.Parse(Console.ReadLine());
+        int _duration = int.Parse(Console.ReadLine());
         Console.WriteLine("Prepare to begin...");
         PauseWithSpinner(3);  // Pausa por 3 segundos
-        return duration;
+        return _duration;
     }
 
     // Exibe a mensagem final
